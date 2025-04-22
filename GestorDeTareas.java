@@ -34,7 +34,7 @@ public class GestorDeTareas {
                     break;
                 case 2:
                     System.out.println("Tareas: " + tareas);
-                    System.out.println("total: "+ contarTareas(tareas))
+                    System.out.println("total: "+ contarTareas(tareas));
                     break;
             }
         } while (opcion != 3);
