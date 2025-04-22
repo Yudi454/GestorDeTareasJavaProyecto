@@ -7,6 +7,10 @@ public class GestorDeTareas {
         Scanner sc = new Scanner(System.in);
         int opcion;
 
+        public static int contarTareas(ArrayList<String> lista){
+            return lista.size();
+        }
+
         do {
             System.out.println("1. Agregar tarea\n2. Listar tareas\n3. Salir");
             try {
@@ -30,6 +34,7 @@ public class GestorDeTareas {
                     break;
                 case 2:
                     System.out.println("Tareas: " + tareas);
+                    System.out.println("total: "+ contarTareas(tareas))
                     break;
             }
         } while (opcion != 3);
