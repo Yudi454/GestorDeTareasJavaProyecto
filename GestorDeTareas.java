@@ -2,15 +2,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GestorDeTareas {
-    
-    public static int contarTareas(ArrayList<String> lista){
+
+    public static int contarTareas(ArrayList<String> lista) {
         return lista.size();
     }
+
+    public static boolean tareaExiste(ArrayList<String> lista, String tarea) {
+        return lista.contains(tarea);
+    }
+
     public static void main(String[] args) {
         ArrayList<String> tareas = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int opcion;
-
 
         do {
             System.out.println("1. Agregar tarea\n2. Listar tareas\n3. Salir");
@@ -35,7 +39,17 @@ public class GestorDeTareas {
                     break;
                 case 2:
                     System.out.println("Tareas: " + tareas);
-                    System.out.println("total: "+ contarTareas(tareas));
+                    System.out.println("total: " + contarTareas(tareas));
+                    break;
+                case 3:
+                    System.out.println("Escribe la tarea a buscar:");
+                    sc.nextLine();
+                    String buscar = sc.nextLine();
+                    if (tareaExiste(tareas, buscar)) {
+                        System.out.println("La tarea existe.");
+                    } else {
+                        System.out.println("La tarea NO existe.");
+                    }
                     break;
             }
         } while (opcion != 3);
