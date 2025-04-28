@@ -2,14 +2,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GestorDeTareas {
+    
+    public static int contarTareas(ArrayList<String> lista){
+        return lista.size();
+    }
     public static void main(String[] args) {
         ArrayList<String> tareas = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int opcion;
 
-        public static int contarTareas(ArrayList<String> lista){
-            return lista.size();
-        }
 
         do {
             System.out.println("1. Agregar tarea\n2. Listar tareas\n3. Salir");
